@@ -1,0 +1,478 @@
+.bangers-regular {
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .permanent-marker-regular {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .balsamiq-sans-regular {
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .balsamiq-sans-bold {
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .balsamiq-sans-regular-italic {
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .balsamiq-sans-bold-italic {
+    font-family: "Balsamiq Sans", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Bangers", cursive;
+  }
+  
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 1%;
+    margin-left: 1.5%;
+    width: 97%;
+    box-sizing: border-box;
+    z-index: 999;
+    background-color: transparent;
+    
+  }
+  .header.scrolled {
+    background-color: rgba(243, 241, 241, 0.962);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  .navbar ul li:first-child {
+    font-size: 2.5rem;
+    font-family: "Permanent Marker", cursive; 
+    color: #000; 
+  }
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding:  0.8rem 1.2rem;
+    align-items: center;
+  }
+  .navbar ul li {
+    font-size: clamp(1rem, 1.5vw, 2rem);
+  }
+  .logo{
+    font-size: clamp(1.2rem, 2vw, 3.5rem)
+  }
+  .hero_page {
+    height: 600px;
+    display: flex;
+    margin-top: 130px;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .pic {
+    transition: transform 0.1s ease;
+    position: relative;
+    border: 3px solid black;
+    min-height: 100%;
+    min-width: 30%;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .my-picture,
+  .my-picture-hover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .my-picture-hover {
+    opacity: 0;
+    z-index: 2;
+  }
+  
+  .pic:hover .my-picture-hover {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  .pic:hover .my-picture {
+    opacity: 0;
+  }
+  
+  .pic:hover .hello {
+    transform: scale(1.8) translate(-5%, -15%);
+    animation: sideWiggle 0.4s ease-in-out infinite;
+    transform-origin: center;
+  }
+  
+  .hello {
+    transition: transform 0.4s ease;
+    position: absolute;
+    top: 1.2%;
+    left: 20%;
+    color: rgb(0, 0, 0);
+    font-size: 26px;
+    font-family: "Permanent Marker", cursive;
+    z-index: 2;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  @keyframes sideWiggle {
+    0%,
+    100% {
+      rotate: 0deg;
+    }
+    25% {
+      rotate: 5deg;
+    }
+    50% {
+      rotate: 0deg;
+    }
+    75% {
+      rotate: -5deg;
+    }
+  }
+  
+  .about {
+    height: 600px;
+    width: 43%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .box {
+    flex: 1;
+  }
+  .comic-wrapper {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 90%);
+    background: #000; /* border color */
+    margin-bottom: -10px;
+  }
+  .comic-wrapper-2 {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+    background: #000; /* border color */
+    margin-top: -10px;
+  }
+  .name {
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    position: absolute;
+    /* min-height: 33%; */
+    background-color: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .name_text {
+    font-size: 120px;
+  }
+  
+  .intro {
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    position: absolute;
+    /* min-height: 33%; */
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .intro_text {
+    font-size: 120px;
+  }
+  .name_text,
+.intro_text {
+  font-size: clamp(2.5rem, 10vw, 120px);
+}
+
+  .buttons {
+    border: 3px solid black;
+    /* min-height: 33%; */
+    width: 100%;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .buttons_text {
+    font-size: 80px;
+  }
+  
+  #typewriter::after {
+    content: "|";
+    animation: blink 0.7s infinite;
+  }
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+  }
+  }
+  .projects{
+    position: relative;
+    padding: 3rem 1.5rem 2rem;
+    background: #fff;
+    font-family: 'Comic Neue', cursive;
+    min-height: 600px;
+    max-width: 80rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 6px 6px 0 #222;
+    border: 4px solid black;
+    margin: auto;
+    margin-top: 7rem;
+    /* gap: 5rem; */
+  }
+  .section-title {
+    text-align: center;
+    border-bottom: 3px solid rgb(0, 0, 0);
+    margin-bottom: 2rem;
+    position: absolute;
+    top: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(0, 0, 0);
+    border: 3px solid black;
+    padding: 0.5rem 2rem;
+    
+    font-size: 2rem;
+    color: #fff;
+    box-shadow: 6px 6px 0 #ffe100, -4px 4px 0 #ffe100;
+    z-index: 2;
+  }
+  .individual-project{
+    margin-left: 4rem;
+    margin-top: 4rem;
+    width: 90%;
+    display: flex;
+    gap: 0.1rem;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top to prevent stretching */
+    margin-bottom: 5rem; 
+    /* position: relative; */
+  }
+  .about-project{
+    display:flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 54%;
+  }
+  .info-wrapper{
+    position: relative;
+    width: 100%;
+    /* flex: 1; */
+    clip-path: polygon(0% 0%, 100% 0%, 96% 100%, 0% 100%);
+    background: #000; 
+    height: 13rem;
+    margin-bottom: -10px;
+    /* z-index: 1; */
+  }
+  .info-project{
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    background-color: #fff;
+    clip-path: polygon(0% 0%, 99.89% 0%, 96% 100%, 0% 100%);
+    display: flex;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  .stack-wrapper{
+    position: relative;
+    width: 96%;
+    clip-path: polygon(0% 0%, 100% 0%, 98% 100%, 0% 100%);
+    background: #000; 
+    height: 6rem;
+    margin-bottom: -10px;
+  }
+  .stack{
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    background-color: #fff;
+    clip-path: polygon(0% 0%, 99.89% 0%, 98% 100%, 0% 100%);
+    display: flex;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  .project-pic-content{
+    position: relative;
+    width: 30rem;
+    height: 19.5rem; /* border color */
+    margin-left: -5px;
+  }
+  .project-picture-wrapper{
+    clip-path: polygon(9% 0, 100% 0, 100% 100%, 0 100%);
+    background: #000; 
+    overflow:visible;
+    height: 100%;
+    width: 100%;
+  }
+  .project-pic{
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    position: absolute;
+    background-color: #fff;
+    clip-path: polygon(9% 0, 100% 0, 100% 100%, 0 100%);}
+  .missions-name{
+    position: absolute;
+    top: -1.5rem;
+    left: 50%;
+    transform: translateX(5%);
+    background: rgb(0, 0, 0);
+    border: 3px solid black;
+    padding: 0.5rem 2rem;
+    font-size: 1.5rem;
+    color: #fff;
+    box-shadow: 6px 6px 0 #d279f8, -4px 4px 0  #d279f8;
+    z-index: 10;
+  }
+
+
+  /* trial */
+
+  .individual-project2{
+    margin-left: 4rem;
+    margin-top: 4rem;
+    width: 90%;
+    display: flex;
+    /* flex-direction: row-reverse; */
+    gap: 0.1rem;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top to prevent stretching */
+    margin-bottom: 5rem; 
+    /* position: relative; */
+  }
+  .about-project2{
+    display:flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 54%;
+  }
+  .info-wrapper2{
+    position: relative;
+    width: 98%;
+    margin-left: 0.7rem;
+    /* flex: 1; */
+    clip-path: polygon(4% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background: #000; 
+    height: 13rem;
+    margin-bottom: -10px;
+    /* z-index: 1; */
+  }
+  .info-project2{
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    background-color: #fff;
+    clip-path: polygon(4% 0%, 100% 0%, 100% 100%, 0% 100%);
+    display: flex;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  .stack-wrapper2{
+    position: relative;
+    width: 100%;
+    clip-path: polygon(2% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background: #000; 
+    height: 6rem;
+    margin-bottom: -10px;
+  }
+  .stack2{
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    background-color: #fff;
+    clip-path: polygon(2% 0%, 100% 0%, 100% 100%, 0% 100%);
+    display: flex;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  .project-pic-content2{
+    position: relative;
+    width: 30rem;
+    height: 19.5rem; /* border color */
+    margin-right: -5px;
+    margin-left: 0%;
+  }
+  .project-picture-wrapper2{
+    clip-path: polygon(0% 0, 100% 0, 90% 100%, 0 100%);
+    background: #000; 
+    overflow:visible;
+    height: 100%;
+    width: 100%;
+  }
+  .project-pic2{
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    position: absolute;
+    background-color: #fff;
+    clip-path: polygon(0% 0, 100% 0, 90% 100%, 0 100%);}
+
+  .missions-name2{
+    position: absolute;
+    top: -1.5rem;
+    left: 50%;
+    transform: translateX(-105%);
+    background: rgb(0, 0, 0);
+    border: 3px solid black;
+    padding: 0.5rem 2rem;
+    font-size: 1.5rem;
+    color: #fff;
+    box-shadow: -6px 6px 0 #d279f8, 4px 4px 0  #d279f8;
+    z-index: 10;
+  }
