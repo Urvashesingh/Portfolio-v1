@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Bangers&family=Permanent+Marker&display=swap" rel="stylesheet">
@@ -38,12 +39,13 @@
         </nav>
       </div>
       <div class="hero_page">
-        <div class="pic">
-          <!-- <img src="images/me-comic.png" class="my-picture" alt="" /> -->
-          <!-- <img src="images/me-comic.png" class="my-picture-hover" alt="" /> -->
-          <div class="hello">hello</div>
+        <div class="panel panel1">
+          <img src="images\bg1.JPG"  class="port1">
+          <div class="panel1-button">
+  <a href="files/urvashi_resume.pdf" target="_blank" class="resume-button">My Resume</a>
+</div>
         </div>
-        <div class="about">
+        <div class="panel panel2 about">
           <div class="comic-wrapper">
             <div class="name box">
               <div class="name_text">URVASHI</div>
@@ -57,29 +59,92 @@
           </div>
 
           <div class="buttons box">
+            <div class="buttons-bg"></div>
             <div class="buttons_text">a <span id="typewriter"></span></div>
+            
+          </div>
+        </div>
+        <div class="panel panel3">
+          <div class="innerpanel1"><img src="images\bg31.JPG"  class="port1">
+          <div class="overlay-button">
+  <button onclick="scrollToSection('projects')">View Projects</button>
+</div>
+</div>
+          <div class="innerpanel2"><img src="images\bg32.JPG"  class="port1">
+          <div class="overlay-button">
+  <button onclick="scrollToSection('contact')">Take Contact</button>
+</div>
+</div>
+        </div>
+        
+      </div>
+
+      <div class="aboutme">
+        <h2 class="aboutme-title">About Me</h2>
+        <div class="innerbox">
+          
+          <div class="textsection">
+              <div class="infome">
+                <p class="infomehello">    Hey I'm Urvashi Singh </p>
+    <p class="infometext">
+        <i class="fa-solid fa-location-dot infome-icon"></i>
+        <span class="infome-text-content">Based in India</span>
+    </p>
+    <p class="infometext">
+        <i class="fa-solid fa-plus-circle infome-icon"></i>
+        <span class="infome-text-content">20 Years Old</span>
+    </p>
+    <p class="infometext">
+        <i class="fa-solid fa-code infome-icon"></i>
+        <span class="infome-text-content">Full Stack Developer</span>
+    </p>
+    <p class="infometext">
+        <i class="fa-solid fa-calendar-alt infome-icon"></i>
+        <span class="infome-text-content">An Engineering Undergraduate</span>
+    </p>
+</div>
+              
+              <div class="aboutmemysocial">
+                <p class="aboutmemysocialtext">I am a full stack developer based in India. I have developed a strong grasp of a variety of technologies. My skillset includes HTML, CSS, JavaScript, C, Python, ReactJS, MySQL, etc. I am passionate about my work, and I like what I do; that's why I am capable of building super furnished and industry-level websites with utmost dedication. You can view my projects in the portfolio section below. I am always available to work for you and can create engaging web experiences that meet and fulfill your expectations for your dream website.</p>
+              </div>
+            
+          </div>
+          <div class="myphoto">
+            <div class="photo"></div>
           </div>
         </div>
       </div>
-      <div class="projects">
+      <div class="projects" id="projects">
           <h2 class="section-title">Missions Completed</h2>
           <div class="individual-project">
             
             <div class="about-project">
               <div class="info-wrapper">
                 <div class="info-project">
-                  <p class="info">hwdgawedjygbsydfc djfvcejhfcjdfgcsj dfvsehdgfvcs eyf csjegvfjsreyg fyr gfjcshgvfg</p>
+                  <p class="info">A simulation game where you manage your planet's resources like water, oxygen, and temperature to keep it balanced and nourishing.</p>
+                
                 </div>
               </div>
-    
+              
               <div class="stack-wrapper">
                 <div class="stack">
-                  <p class="stack-text">jhgdvfjhgvdfhndsvhsdgvfjhsdgvfshdvfdn dvdv</p>
+                  <!-- <p class="stack-text">jhgdvfjhgvdfhndsvhsdgvfjhsdgvfshdvfdn dvdv</p> -->
+                   <div class="projectbuttons">
+                <button>
+                    <span class="button-content">View Project →</span>
+                </button>
+                <button>
+                    <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="black">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.082-.74.08-.725.08-.725 1.205.084 1.838 1.237 1.838 1.237 1.07 1.835 2.809 1.305 3.493.998.108-.776.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.573 22.092 24 17.592 24 12c0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    <span class="button-content">GitHub repo</span>
+                </button>
+            </div>               
                 </div>
               </div>
             </div>
             <div class="project-pic-content">
-              <h2 class="missions-name">Planet Builder</h2>
+              <h2 class="missions-name">Build Your Own Planet</h2>
               <div class="project-picture-wrapper">
                 <div class="project-pic">
                   <!-- <img src="images/me-comic.png" class="project-picture" alt="" /> -->
@@ -104,19 +169,198 @@
             <div class="about-project2">
               <div class="info-wrapper2">
                 <div class="info-project2">
-                  <p class="info2">hwdgawedjygbsydfc djfvcejhfcjdfgcsj dfvsehdgfvcs eyf csjegvfjsreyg fyr gfjcshgvfg</p>
+                  <p class="info2">An AI chatbot powered by the Gemini API that engages in natural conversations,answers questions and assist with tasks.
+</p>
                 </div>
               </div>
     
               <div class="stack-wrapper2">
                 <div class="stack2">
-                  <p class="stack-text2">jhgdvfjhgvdfhndsvhsdgvfjhsdgvfshdvfdn dvdv</p>
+                  <!-- <p class="stack-text">jhgdvfjhgvdfhndsvhsdgvfjhsdgvfshdvfdn dvdv</p> -->
+                   <div class="projectbuttons">
+                <button>
+                    <span class="button-content">View Project &#8592;</span>
+                </button>
+                <button>
+                    <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="black">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.082-.74.08-.725.08-.725 1.205.084 1.838 1.237 1.838 1.237 1.07 1.835 2.809 1.305 3.493.998.108-.776.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.573 22.092 24 17.592 24 12c0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    <span class="button-content">GitHub repo</span>
+                </button>
+            </div>               
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="individual-project">
+            
+            <div class="about-project">
+
+              <div class="info-wrapper">
+                <div class="info-project3">
+                  <p class="info">This is the project you are currently visiting. Wanted to try out and learn some new technologies as well as I needed a portfolio to get my name out there. Learned a lot along the way. Had a ton of fun with this project</p>
+                </div>
+              </div>
+    
+              <div class="stack-wrapper">
+                <div class="stack3">
+                  <!-- <p class="stack-text">jhgdvfjhgvdfhndsvhsdgvfjhsdgvfshdvfdn dvdv</p> -->
+                   <div class="projectbuttons">
+                <button>
+                    <span class="button-content">View Project →</span>
+                </button>
+                <button>
+                    <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="black">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.082-.74.08-.725.08-.725 1.205.084 1.838 1.237 1.838 1.237 1.07 1.835 2.809 1.305 3.493.998.108-.776.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.573 22.092 24 17.592 24 12c0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    <span class="button-content">GitHub repo</span>
+                </button>
+            </div>               
+                </div>
+              </div>
+            </div>
+            <div class="project-pic-content">
+              <h2 class="missions-name3">Portfolio</h2>
+              <div class="project-picture-wrapper">
+                <div class="project-pic3">
+                  <!-- <img src="images/me-comic.png" class="project-picture" alt="" /> -->
+                 
                 </div>
               </div>
             </div>
           </div>
       </div>
+      <section class="skillset-section">
+        <div class="skillset-title-container">
+            <h2 class="skillset-title">Dev Arsenal</h2>
+        </div>
+        <div class="skillset-grid">
+            <!-- Sample HTML with replaced image links -->
+              <div class="skill-block">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Logo" class="skill-logo">
+                  <p class="skill-name">REACT</p>
+              </div>
+
+              <div class="skill-block">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS Logo" class="skill-logo">
+                  <p class="skill-name">CSS</p>
+              </div>
+
+              <div class="skill-block">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML Logo" class="skill-logo">
+                  <p class="skill-name">HTML</p>
+              </div>
+
+              <div class="skill-block">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo" class="skill-logo">
+                  <p class="skill-name">JAVASCRIPT</p>
+              </div>
+
+              <div class="skill-block">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" class="skill-logo">
+                  <p class="skill-name">PYTHON</p>
+              </div>
+
+              <div class="skill-block">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java Logo" class="skill-logo">
+                  <p class="skill-name">JAVA</p>
+              </div>
+
+              <div class="skill-block">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="C Logo" class="skill-logo">
+                  <p class="skill-name">C</p>
+              </div>
+
+              <div class="skill-block">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg" alt="MySQL Logo" class="skill-logo">
+                  <p class="skill-name">MYSQL</p>
+              </div>
+
+        </div>
+    </section>
+      
+
+
+       
+    <div class="comic-contact-box" id="contact">
+  <div class="comic-bubble">
+    <img src="images\dae207c108b135c4d971ccf9478ecaec.png" alt="Thinking Bubble" class="bubble-img">
+    <div class="bubble-text">Get in touch</div>
+  </div>
+   <div class="contact-content">
+            <div class="email-info">
+                <a href="mailto:vaibhavxtripathi@email.com" class="email-link">vaibhavxtripathi@email.com</a>
+                <div class="email-underline"></div>
+            </div>
+            <div class="location-info">
+                <i class="fa-solid fa-location-dot location-icon"></i>
+                <span class="location-text">Based in India</span>
+            </div>
+        </div>
+        <div class="social-links">
+            <h2> My Socials -   </h3>
+            <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub" class="social-icon-link">
+                <i class="fa-brands fa-github social-icon"></i>
+            </a>
+            <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram" class="social-icon-link">
+                <i class="fa-brands fa-instagram social-icon"></i>
+            </a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn" class="social-icon-link">
+                <i class="fa-brands fa-linkedin-in social-icon"></i>
+            </a>
+        </div>
+</div>
+    
     </div>
     <script src="script.js"></script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const triggers = document.querySelectorAll(".name.box, .intro.box, .buttons.box");
+    const targets = document.querySelectorAll(".port1, .name.box, .intro.box , .buttons-bg");
+
+    triggers.forEach(trigger => {
+      trigger.addEventListener("mouseenter", () => {
+        targets.forEach(el => el.classList.add("active-hover"));
+      });
+      trigger.addEventListener("mouseleave", () => {
+        targets.forEach(el => el.classList.remove("active-hover"));
+      });
+    });
+  });
+
+  const hoverBoxes = document.querySelectorAll('.name, .intro, .buttons');
+const images = document.querySelectorAll('.port1');
+
+hoverBoxes.forEach(box => {
+  box.addEventListener('mouseenter', () => {
+    images.forEach(img => img.classList.add('active-hover'));
+  });
+
+  box.addEventListener('mouseleave', () => {
+    images.forEach(img => img.classList.remove('active-hover'));
+  });
+});
+
+const buttonsBg = document.querySelector('.buttons-bg');
+
+document.querySelector('.buttons.box').addEventListener('mouseenter', () => {
+  buttonsBg.classList.add('active-hover');
+});
+document.querySelector('.buttons.box').addEventListener('mouseleave', () => {
+  buttonsBg.classList.remove('active-hover');
+});
+
+function scrollToSection(id) {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+
+</script>
+
   </body>
 </html>
+
+

@@ -8,6 +8,8 @@
   const wait = 1000;
   const element = document.getElementById("typewriter");
 
+  
+
   function type() {
     const current = words[i % words.length];
     if (isDeleting) {

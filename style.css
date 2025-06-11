@@ -42,6 +42,7 @@
   
   body {
     font-family: "Bangers", cursive;
+    background-color: #f6f4f4;
   }
   
   .header {
@@ -61,7 +62,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   }
   .navbar ul li:first-child {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-family: "Permanent Marker", cursive; 
     color: #000; 
   }
@@ -81,82 +82,37 @@
   .hero_page {
     height: 600px;
     display: flex;
-    margin-top: 130px;
+    margin-top: 9rem;
     justify-content: center;
     gap: 2rem;
+    /* border: 3px solid black; */
   }
   
-  .pic {
-    transition: transform 0.1s ease;
-    position: relative;
-    border: 3px solid black;
-    min-height: 100%;
-    min-width: 30%;
-    background-color: rgb(255, 255, 255);
+  .panel1{
+    margin-top: 2rem;
+    height: 540px;
+    width: 20%;
+    border: 5px solid black;
     overflow: hidden;
-    justify-content: center;
-    align-items: center;
   }
-  
-  .my-picture,
-  .my-picture-hover {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  
-  .my-picture-hover {
-    opacity: 0;
-    z-index: 2;
-  }
-  
-  .pic:hover .my-picture-hover {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-  .pic:hover .my-picture {
-    opacity: 0;
-  }
-  
-  .pic:hover .hello {
-    transform: scale(1.8) translate(-5%, -15%);
-    animation: sideWiggle 0.4s ease-in-out infinite;
-    transform-origin: center;
-  }
-  
-  .hello {
-    transition: transform 0.4s ease;
-    position: absolute;
-    top: 1.2%;
-    left: 20%;
-    color: rgb(0, 0, 0);
-    font-size: 26px;
-    font-family: "Permanent Marker", cursive;
-    z-index: 2;
-    padding: 10px;
-    border-radius: 8px;
-  }
-  @keyframes sideWiggle {
-    0%,
-    100% {
-      rotate: 0deg;
-    }
-    25% {
-      rotate: 5deg;
-    }
-    50% {
-      rotate: 0deg;
-    }
-    75% {
-      rotate: -5deg;
-    }
-  }
-  
+  .panel img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit:fill;
+filter: grayscale();   
+transition: transform 0.3s ease , filter 0.3s ease;
+
+}
+
+.panel img.active-hover {
+  filter: none;
+  transform: scale(1.015);
+}
+
   .about {
     height: 600px;
-    width: 43%;
+    width: 35%;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -181,58 +137,122 @@
     margin-top: -10px;
   }
   .name {
-    top: 3px;
-    bottom: 3px;
-    left: 3px;
-    right: 3px;
+    top: 5px;
+    bottom: 5px;
+    left: 6px;
+    right: 6px;
     position: absolute;
-    /* min-height: 33%; */
-    background-color: #fff;
+   background-image: url('images/bg21.JPG');
+   /* opacity: 0.9; <<-- **UPDATE THIS PATH** with your actual image path! */
+   background-size: 100% 100%; /* How the background image should fit the div */
+   background-position: top; /* Where the image should be positioned */
+   background-repeat: no-repeat;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 90%);
     display: flex;
     justify-content: center;
     align-items: center;
+    filter: grayscale();
+    transition: transform 0.3s ease , filter 0.3s ease;
   }
   
   .name_text {
     font-size: 120px;
+    text-shadow:
+    1px 1px 0px white,    /* Bottom-right */
+    -1px -1px 0px white,  /* Top-left */
+    1px -1px 0px white,   /* Top-right */
+    -1px 1px 0px white,   /* Bottom-left */
+    0px 1px 0px white,    /* Bottom */
+    0px -1px 0px white,   /* Top */
+    1px 0px 0px white,    /* Right */
+    -1px 0px 0px white;
   }
   
   .intro {
-    top: 3px;
-    bottom: 3px;
-    left: 3px;
-    right: 3px;
+    top: 5px;
+    bottom: 5px;
+    left: 6px;
+    right: 6px;
     position: absolute;
     /* min-height: 33%; */
     clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
-    background-color: #fff;
+    overflow: hidden;
+     background-image: url('images/bg22.JPG'); 
+     filter: grayscale();/* <<-- **UPDATE THIS PATH** with your actual image path! */
+  background-size:100% 100%; /* How the background image should fit the div */
+  background-position: center; /* Where the image should be positioned */
+  background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  
+  filter: grayscale();   
+transition: transform 0.3s ease , filter 0.3s ease;
+
+}
+.panel:hover .img{
+  filter: none;
+  transform: scale(1.015); /* Zoom in slightly on hover */
+}
   .intro_text {
     font-size: 120px;
+    text-shadow:
+    1px 1px 0px white,    /* Bottom-right */
+    -1px -1px 0px white,  /* Top-left */
+    1px -1px 0px white,   /* Top-right */
+    -1px 1px 0px white,   /* Bottom-left */
+    0px 1px 0px white,    /* Bottom */
+    0px -1px 0px white,   /* Top */
+    1px 0px 0px white,    /* Right */
+    -1px 0px 0px white;
   }
   .name_text,
 .intro_text {
   font-size: clamp(2.5rem, 10vw, 120px);
 }
 
-  .buttons {
-    border: 3px solid black;
+  .buttons{
+    position: relative;
+    border: 5px solid black;
     /* min-height: 33%; */
     width: 100%;
-  }
-  .buttons {
+  
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+    overflow: hidden;
   }
+  .buttons-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('images/bg23.JPG');
+  background-size: 100% 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  filter: grayscale();
+  transition: transform 0.3s ease, filter 0.3s ease;
+  z-index: 0;
+}
   .buttons_text {
+    position: relative;
     font-size: 80px;
+    text-shadow:
+    1px 1px 0px white,    /* Bottom-right */
+    -1px -1px 0px white,  /* Top-left */
+    1px -1px 0px white,   /* Top-right */
+    -1px 1px 0px white,   /* Bottom-left */
+    0px 1px 0px white,    /* Bottom */
+    0px -1px 0px white,   /* Top */
+    1px 0px 0px white,    /* Right */
+    -1px 0px 0px white;
+    z-index: 1;
   }
+   .buttons-bg.active-hover {
+  filter: none;
+  transform: scale(1.015);
+}
+
   
   #typewriter::after {
     content: "|";
@@ -247,18 +267,100 @@
       opacity: 0;
   }
   }
+  .panel3{
+     margin-top: 3rem;
+    height: 500px;
+    width: 20%;
+    /* border: 3px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+  }
+  .innerpanel1{
+    width: 100%;
+    height: 245px;
+    border: 5px solid black;
+  }
+  .innerpanel2{
+    width: 100%;
+    height: 245px;
+    border: 5px solid black;
+  }
+
+
+.active-hover{
+  filter: none;
+  transform: scale(1.015);
+}
+
+/* === 🔘 Elegant Button Styles === */
+button,
+.resume-button {
+  color: #000000;
+  /* border: 3px solid #000000; */
+  background: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  font-family: 'Balsamiq Sans', sans-serif;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  letter-spacing: 1px;
+}
+
+button:hover,
+.resume-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* === 📌 Positioning in Panel1 (Resume Button) === */
+.panel1 {
+  position: relative;
+}
+.panel1-button {
+  position: absolute;
+  top: 45%;
+  left: 15%;
+  /* transform: translateX(-50% , -50%); */
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === 🧲 Positioning over Inner Panels (Project & Contact) === */
+.innerpanel1,
+.innerpanel2 {
+  position: relative;
+}
+.overlay-button {
+  background: none;
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  /* transform: translateX(-50% , -50%); */
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
   .projects{
     position: relative;
-    padding: 3rem 1.5rem 2rem;
+    padding: 2rem 1.5rem 2rem;
     background: #fff;
+    background: linear-gradient(to bottom, #f1f1f1, #c3c3c3); 
     font-family: 'Comic Neue', cursive;
     min-height: 600px;
     max-width: 80rem;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 6px 6px 0 #222;
+    background-color: #f6f4f4;
     border: 4px solid black;
     margin: auto;
-    margin-top: 7rem;
+    margin-top: 10rem;
     /* gap: 5rem; */
   }
   .section-title {
@@ -279,9 +381,8 @@
     z-index: 2;
   }
   .individual-project{
-    margin-left: 4rem;
     margin-top: 4rem;
-    width: 90%;
+    width: 100%;
     display: flex;
     gap: 0.1rem;
     justify-content: center;
@@ -295,6 +396,7 @@
     gap: 16px;
     width: 54%;
   }
+  
   .info-wrapper{
     position: relative;
     width: 100%;
@@ -314,10 +416,75 @@
     background-color: #fff;
     clip-path: polygon(0% 0%, 99.89% 0%, 96% 100%, 0% 100%);
     display: flex;
+    flex-direction: column;
     z-index: 1;
     justify-content: center;
     align-items: center;
   }
+  .info-project p,.info-project2 p , .info-project3 p {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0 1rem;
+    line-height: 1.6;
+    color: #000000;
+    text-shadow:
+    1px 1px 0px white,    /* Bottom-right */
+    -1px -1px 0px white,  /* Top-left */
+    1px -1px 0px white,   /* Top-right */
+    -1px 1px 0px white,   /* Bottom-left */
+    0px 1px 0px white,    /* Bottom */
+    0px -1px 0px white,   /* Top */
+    1px 0px 0px white,    /* Right */
+    -1px 0px 0px white;
+}
+
+  .projectbuttons {
+    display: flex;
+    gap: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectbuttons button {
+    background-color: white;
+    color: black;
+    padding: 0.8rem 1.5rem;
+    border: 3px solid black;
+    border-radius: 3px;
+    font-family: 'Comic Neue', cursive;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    box-shadow: 4px 4px 0px rgb(49, 49, 49);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.projectbuttons button .button-content {
+    transform: skewX(-10deg);
+    display: inline-block;
+}
+
+.projectbuttons button .button-icon {
+    fill: black;
+    transform: skewX(-10deg);
+    width: 20px;
+    height: 20px;
+}
+
+.projectbuttons button:hover {
+    transform: scale(1.05);
+}
+
+.projectbuttons button:active {
+    transform: scale(0.98);
+    box-shadow: 2px 2px 0px black;
+}
   .stack-wrapper{
     position: relative;
     width: 96%;
@@ -358,19 +525,30 @@
     left: 3px;
     right: 3px;
     position: absolute;
-    background-color: #fff;
-    clip-path: polygon(9% 0, 100% 0, 100% 100%, 0 100%);}
+    background-image: url('images/plantebuilder.png'); /* <<-- **UPDATE THIS PATH** with your actual image path! */
+  background-size:cover; /* How the background image should fit the div */
+  background-position:bottom; /* Where the image should be positioned */
+  background-repeat: no-repeat;
+    clip-path: polygon(9% 0, 100% 0, 100% 100%, 0 100%);transition: transform 0.3s ease;
+  filter: grayscale();   
+transition: transform 0.3s ease , filter 0.3s ease;
+
+}
+.project-pic:hover {
+  filter: none;
+  transform: scale(1.05); /* Zoom in slightly on hover */
+}
   .missions-name{
     position: absolute;
     top: -1.5rem;
     left: 50%;
-    transform: translateX(5%);
+    transform: translateX(-10%);
     background: rgb(0, 0, 0);
     border: 3px solid black;
     padding: 0.5rem 2rem;
     font-size: 1.5rem;
     color: #fff;
-    box-shadow: 6px 6px 0 #d279f8, -4px 4px 0  #d279f8;
+    box-shadow: 6px 6px 1px #6eff61, 4px 4px 0  #6eff61;
     z-index: 10;
   }
 
@@ -378,9 +556,9 @@
   /* trial */
 
   .individual-project2{
-    margin-left: 4rem;
+   
     margin-top: 4rem;
-    width: 90%;
+    width: 100%;
     display: flex;
     /* flex-direction: row-reverse; */
     gap: 0.1rem;
@@ -412,7 +590,7 @@
     bottom: 3px;
     left: 3px;
     right: 3px;
-    background-color: #fff;
+    background-color: white;
     clip-path: polygon(4% 0%, 100% 0%, 100% 100%, 0% 100%);
     display: flex;
     z-index: 1;
@@ -433,7 +611,7 @@
     bottom: 3px;
     left: 3px;
     right: 3px;
-    background-color: #fff;
+    background-color: white;
     clip-path: polygon(2% 0%, 100% 0%, 100% 100%, 0% 100%);
     display: flex;
     z-index: 1;
@@ -460,19 +638,522 @@
     left: 3px;
     right: 3px;
     position: absolute;
-    background-color: #fff;
-    clip-path: polygon(0% 0, 100% 0, 90% 100%, 0 100%);}
+   background-image: url('images/chatbot.png'); /* <<-- **UPDATE THIS PATH** with your actual image path! */
+  background-size:cover; /* How the background image should fit the div */
+  background-position:bottom; /* Where the image should be positioned */
+  background-repeat: no-repeat;
+    clip-path: polygon(0% 0, 100% 0, 90% 100%, 0 100%);
+    filter: grayscale();
+transition: transform 0.3s ease , filter 0.3s ease;
+
+}
+.project-pic2:hover {
+  filter: none;
+  transform: scale(1.02); /* Zoom in slightly on hover */
+}
 
   .missions-name2{
     position: absolute;
     top: -1.5rem;
     left: 50%;
-    transform: translateX(-105%);
+    transform: translateX(-130%);
     background: rgb(0, 0, 0);
     border: 3px solid black;
     padding: 0.5rem 2rem;
     font-size: 1.5rem;
     color: #fff;
-    box-shadow: -6px 6px 0 #d279f8, 4px 4px 0  #d279f8;
+    box-shadow: 6px 6px 0 #b56efd, 4px 4px 0  #b56efd;
     z-index: 10;
   }
+  .missions-name3{
+    position: absolute;
+    top: -1.5rem;
+    left: 50%;
+    transform: translateX(30%);
+    background: rgb(0, 0, 0);
+    border: 3px solid black;
+    padding: 0.5rem 2rem;
+    font-size: 1.5rem;
+    color: #fff;
+    box-shadow: 6px 6px 0 #ff9c11, 4px 4px 0  #ff9c11;
+    z-index: 10;
+  }
+
+  
+  .info-project3{
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    background-color: #fff;
+    clip-path: polygon(0% 0%, 99.89% 0%, 96% 100%, 0% 100%);
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .stack3{
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    background-color: #fff;
+    clip-path: polygon(0% 0%, 99.89% 0%, 98% 100%, 0% 100%);
+    display: flex;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-pic3{
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    position: absolute;
+    background-image: url('images/plantebuilder.png'); /* <<-- **UPDATE THIS PATH** with your actual image path! */
+  background-size:cover; /* How the background image should fit the div */
+  background-position:bottom; /* Where the image should be positioned */
+  background-repeat: no-repeat;
+    clip-path: polygon(9% 0, 100% 0, 100% 100%, 0 100%);transition: transform 0.3s ease;
+  filter: grayscale();   
+transition: transform 0.3s ease , filter 0.3s ease;
+
+}
+.project-pic3:hover {
+  filter: none;
+  transform: scale(1.02); /* Zoom in slightly on hover */
+}
+
+  
+  /* -----about me--- */
+
+  .aboutme {
+    position: relative; /* Keep this to position children absolutely relative to it */
+    padding: 3rem 1.5rem 2rem;
+  background: linear-gradient(to bottom, #f1f1f1, #c3c3c3); 
+    font-family: 'Comic Neue', cursive;
+    min-height: 42rem;
+    max-width: 75rem;
+    border-radius: 5px;
+    border: 4px solid black;
+    margin: auto;
+    margin-top: 7rem;
+    overflow: visible; /* <--- IMPORTANT CHANGE: Allow content to go outside */
+}
+
+.aboutme-title {
+    /* No change needed here */
+    text-align: center;
+    border-bottom: 3px solid rgb(0, 0, 0);
+    margin-bottom: 2rem;
+    position: absolute;
+    top: -1.5rem;
+    left: 50%;
+    transform: translateX(-240%);
+    background: rgb(0, 0, 0);
+    border: 3px solid black;
+    padding: 1rem 2.5rem;
+    font-size: 2rem;
+    color: #fff;
+    box-shadow: 7px 7px 0 #ff8bf7, 7px 7px 0 #ff8bf7;
+    z-index: 2;
+}
+
+.innerbox {
+    margin-left: 1rem;
+    margin-top: 4rem;
+    height: (100% - 4rem);
+    width: 100%; /* 4rem left margin, 30rem photo width, +20px overlap */
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: flex-start;
+}
+
+.textsection {
+    width: 42rem;
+    display: flex; /* Assuming textsection is a flex container for infome and aboutmemysocial */
+    flex-direction: column; /* Stack infome and aboutmemysocial vertically */
+    gap: 1rem; /* Gap between infome and aboutmemysocial */
+}
+
+.infome {
+    box-shadow: none;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: flex-start;
+    width: 115%; 
+    margin-right: 0;
+    border: 4px solid black;
+    border-radius: 5px;
+    min-height: 15rem;
+    background-color: #ffffff;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box; /* No margin-right here as it's part of a single column for text */
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+.infome:hover {
+  transform: scale(1.05); /* Zoom in slightly on hover */
+}
+
+.infometext{
+transition: transform 0.3s ease;
+}
+.infometext:hover{
+  transform: scale(1.05); /* Zoom in slightly on hover */
+}
+
+.infomehello{
+  font-size: 35px;
+  margin-bottom: 1rem;
+}
+
+.aboutmemysocial {
+    width: 115%; /* Make it fill the remaining space of innerbox */
+    border: 4px solid black;
+    border-radius: 5px;
+    min-height: 17rem;
+   background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    position: relative;
+    z-index: 1;
+    font-size: 22px;
+transition: transform 0.3s ease;
+}
+.aboutmemysocial:hover {
+  transform: scale(1.05); /* Zoom in slightly on hover */
+}
+.myphoto {
+    position: absolute;
+    top: 7rem; /* Keep alignment with content top */
+    right: -60px; /* <--- KEY CHANGE: Negative right value to make it overlap */
+    /* Adjust -20px to control how much it overlaps. Make it -10px, -30px, etc. */
+    width: 25rem;
+    height: 33.5rem;
+    /* left: 47rem; */
+    border: 4px solid black;
+    border-radius: 5px;
+    background-color: black;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: none; /* <--- IMPORTANT CHANGE: Remove any previous transforms */
+}
+
+.photo {
+    height: calc(100% - 3px);
+    width: calc(100% - 3px);
+    /* background-color: #ffffff00; */
+    /* For actual image: */
+    background-image: url('images/me.jpg');
+    filter: grayscale();
+    background-size: cover; 
+     background-position : center;
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+transition: transform 0.3s ease , filter 1s ease;
+
+}
+.photo:hover {
+  filter: none;
+  transform: scale(1.05); /* Zoom in slightly on hover */
+}
+
+/* Media Queries for responsiveness (adjust as needed for your design) */
+@media (max-width: 900px) {
+    .innerbox {
+        flex-direction: column;
+        margin-left: 0;
+        width: 100%;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .infome,
+    .aboutmemysocial {
+        width: 90%;
+        margin-right: 0;
+    }
+
+    .myphoto {
+        position: static; /* Remove absolute positioning when stacked */
+        width: 90%;
+        margin-top: 10px;
+        transform: none;
+        height: 300px;
+        right: auto; /* Reset right position */
+    }
+}
+
+@media (max-width: 600px) {
+    .infome,
+    .aboutmemysocial,
+    .myphoto {
+        width: 95%;
+    }
+
+    .aboutme-title {
+        font-size: 1.5rem;
+        padding: 0.3rem 1rem;
+        top: -1rem;
+    }
+}
+
+.skillset-section {
+    background-color: #f6f4f4;
+    /* padding: 60px 20px 40px 20px; */
+    /* font-family: 'Arial', sans-serif; */
+    position: relative;
+    margin-top: 10rem;
+    margin-bottom: 8rem;
+    margin-left: 8rem;
+}
+
+.skillset-grid {
+    display: grid;
+     max-width: 75rem;
+     min-height: 35rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: #f6f4f4;
+}
+
+.skill-block {
+    border: 4px solid #000;
+    border-radius: 3px;
+    padding: 20px 10px;
+    text-align: center;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.skill-logo {
+    width: 8rem;
+    height: 8rem;
+    object-fit: contain;
+    margin-bottom: 10px;
+    filter: grayscale();
+transition: transform 0.3s ease , filter 0.3s ease;
+
+}
+
+.skill-block:hover .skill-logo {
+  filter: none;
+  transform: scale(1.15); /* Zoom in 15% */
+}
+
+.skill-name {
+  font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+    font-size: 22px;
+    color: #111;
+}
+
+/* Title box styled to overlap first skill block */
+.skillset-title-container {
+  margin-left: 0.5rem;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    transform: translateY(-50%);
+    background-color: #111;
+    color: #fff;
+    padding: 10px 20px;
+     box-shadow: 6px 6px 0 #00d9ff, 4px 4px 0 #00d9ff;
+    font-weight: bold;
+    font-family: 'Comic Neue', cursive;
+    z-index: 1;
+}
+
+.comic-contact-box {
+  overflow:visible;
+  margin-top: 15rem;
+  margin-left: 9rem;
+  /* margin: auto; */
+  width: 80vw;
+  height: 50vh;
+  /* margin: auto; */
+  position: relative;
+  background: linear-gradient(to bottom, #f1f1f1, #c3c3c3); 
+  border: 4px solid #000;
+  padding: 20px;
+  font-family: 'Comic Sans MS', cursive; /* The teal background color from the image */
+    color: #000000; /* White text color */
+    padding: 40px 60px; /* Adjust padding as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Pushes content and social links to ends */
+    align-items: center; /* Vertically centers items */
+    width: 100%;
+    max-width: 1200px; /* Max width to match typical website headers */
+    box-sizing: border-box;
+}
+
+/* Comic bubble in top-left */
+.comic-bubble {
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 15rem;
+  pointer-events: none;
+}
+
+.bubble-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bubble-text {
+  position: absolute;
+  top: 23%;
+  left: 15%;
+  right: 10%;
+  color: #000;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    background-color: white;
+    border: 4px solid black;
+    padding: 1.5rem 17rem; /* Space between lines of text */
+}
+
+.contact-title {
+    font-size: 1.2em; /* "Contact Me" text size */
+    margin: 0;
+    font-weight: normal; /* Less bold than default H2 */
+}
+
+.email-info {
+    position: relative; /* For positioning the underline */
+    padding-bottom: 5px; /* Space for the underline */
+}
+
+.email-link {
+    font-size: 2em; /* Large email text size */
+    font-weight: bold;
+    color: #000000; /* White color for the email address */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.email-underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%; /* Adjust length of the underline */
+    height: 3px; /* Thickness of the underline */
+    background-color: #ca0101; /* White underline */
+}
+
+.location-info {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em; /* Location text size */
+    margin-top: 10px; /* Space below email */
+}
+
+.location-icon {
+    font-size: 1.2em; /* Size of the map pin icon */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.social-links {
+    display: flex;
+    gap: 20px; 
+    
+    margin-bottom: 2rem;/* Space between social icons */
+}
+
+.social-icon-link {
+    color: #000000; /* White color for social icons */
+    font-size: 2.2em; /* Size of the social icons */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.social-icon-link:hover {
+    color: #ff0000; /* Slightly off-white on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column; /* Stack content vertically */
+        align-items: flex-start; /* Align items to the left */
+        padding: 30px 40px;
+        gap: 30px; /* Space between contact content and social links */
+    }
+
+    .email-link {
+        font-size: 1.7em; /* Adjust email size for smaller screens */
+    }
+
+    .social-links {
+        margin-top: 20px; /* Add some space above social links when stacked */
+        width: 100%; /* Make social links take full width */
+        justify-content: flex-start; /* Align social icons to the left */
+        gap: 15px;
+    }
+
+    .social-icon-link {
+        font-size: 1.8em; /* Adjust icon size */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 20px 25px;
+    }
+
+    .contact-title {
+        font-size: 1em;
+    }
+
+    .email-link {
+        font-size: 1.4em;
+    }
+
+    .email-underline {
+        width: 80%; /* Make underline longer for smaller email text */
+    }
+
+    .location-info {
+        font-size: 1em;
+    }
+
+    .social-links {
+        gap: 12px;
+    }
+
+    .social-icon-link {
+        font-size: 1.5em;
+    }
+}
+
